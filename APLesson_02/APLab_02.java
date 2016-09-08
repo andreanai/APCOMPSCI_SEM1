@@ -1,4 +1,4 @@
-public class APLesson_02
+public class APLab_02
 {
 	public static void main(String[]args)
 	{
