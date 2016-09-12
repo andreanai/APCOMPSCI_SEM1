@@ -14,7 +14,7 @@ public class BMI_Calculator
 		
 		int weight = keyboard.nextInt();
 		
-		int BMI = 703*weight/height*height;
+		int BMI = (703*weight)/(height*height);
 		
 		System.out.println("Your BMI is " + BMI);
 	}
