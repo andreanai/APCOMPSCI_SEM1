@@ -9,10 +9,10 @@ public class APLab_02
 		
 		String name = "The White House";
 		String address = "1600 Pennsylvania Ave NW";
-		String city = "Washington, D.C.";
+		String city = "Washington D.C.";
 		String zipcode = "20500";
 		
-		System.out.println(name + "\n" + address + "\n" + city + "\n" + zipcode);
+		System.out.println(name + "\n" + address + "\n" + city+ ", " + zipcode);
 		
 		int l = 2;
 		int w = 3;
