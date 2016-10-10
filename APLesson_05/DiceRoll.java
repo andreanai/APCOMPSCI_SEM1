@@ -1,21 +1,24 @@
 import java.util.Random;
 public class DiceRoll
 {
+	static int your_roll;
+	static int computer_roll;
 	public static void main(String[]args)
 	{
 		Random rand = new Random();
-		int your_roll = rand.nextInt(6)+1;
+		your_roll = rand.nextInt(6)+1;
 		System.out.println("You rolled a " + your_roll);
-		int computer_roll = rand.nextInt(6)+1;
+		computer_roll = rand.nextInt(6)+1;
 		System.out.println("The computer rolled a " + computer_roll);
-		
-		rollDice(your_roll, computer_roll);
+		winner();
 	}
-	public static void rollDice(int your_roll, int computer_roll)
+	public static void winner()
 	{
-		if (your_roll>computer_roll)
-			System.out.println("The winner is you!");
+		if (your_roll==computer_roll)
+			System.out.println("You and the computer are tied!");
 		if (your_roll<computer_roll)
 			System.out.println("The winner is the computer!");
+		if (your_roll>computer_roll)
+			System.out.println("The winner is you!");
 	}
 }
