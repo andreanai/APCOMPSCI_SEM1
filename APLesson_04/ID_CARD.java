@@ -24,15 +24,16 @@ public class ID_CARD
 		System.out.println("Enter your age:");
 		int age = kb.nextInt();
 		
-		form.id(school, school_year, first_name, last_name, grade, age);
+		form.id(school, school_year);
+		form.id(first_name, last_name);
+		form.id(grade, age);
 	}
 	
 	public void id(String school, String school_year, String first_name, String last_name, String grade, int age)
 	{
 		System.out.println("  ********************************************");
-		System.out.printf("* %25s        %10s", school, school_year);
-		System.out.printf("\n* %25s        %10s", first_name, last_name);
-		System.out.printf("\n* %25s        %10d", grade, age);
+		System.out.printf("* %25s        %10s",String, String);
+		System.out.printf("\n* %25s        %10s", String, int);
 		System.out.println("\n  ********************************************");
 	}
 	
