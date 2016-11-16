@@ -1,9 +1,7 @@
 import java.util.Scanner;
-
 public class ID_CARD
 {
 	public static void main(String[]args)
-	
 	{
 		Scanner kb = new Scanner(System.in);
 		
@@ -22,19 +20,18 @@ public class ID_CARD
 		kb.nextLine();
 		String school_year= kb.nextLine();
 		System.out.println("Enter your age:");
-		int age = kb.nextInt();
-		
+		String age = kb.nextLine();
+		System.out.println("\n  ********************************************");
 		form.id(school, school_year);
 		form.id(first_name, last_name);
 		form.id(grade, age);
+		System.out.println("  ********************************************");
 	}
 	
-	public void id(String school, String school_year, String first_name, String last_name, String grade, int age)
+	public void id(String a, String b)
 	{
-		System.out.println("  ********************************************");
-		System.out.printf("* %25s        %10s",String, String);
-		System.out.printf("\n* %25s        %10s", String, int);
-		System.out.println("\n  ********************************************");
+		
+		System.out.printf("* %25s        %10s *\n", a, b);
 	}
 	
 }
