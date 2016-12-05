@@ -8,7 +8,7 @@ public class Box
 		String word = kb.nextLine();
 		for(int a = 0; a<word.length(); a++)
 		{
-			System.out.print(word+" ");
+			System.out.println(word);
 		}	
 	}
 }
