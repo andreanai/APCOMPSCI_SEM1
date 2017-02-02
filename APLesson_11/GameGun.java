@@ -1,63 +1,59 @@
 import java.util.*;
+
 public class GameGun
 {
 	static int bulletCount;
-	static int ClipSize = 16;
+	static int clipSize = 16;
 	static int shotCount;
-	static String[]clip;
+	static String [] clip;
+	
 	public static void main(String[]args)
 	{
-		Scanner kb = new Scanner(System.in);
 		bulletCount = 96;
 		shotCount = 0;
-		clip = new String[ClipSize];
+		clip = new String[clipSize];
 		resetClip();
-		while(bulletCount>0 || shotCount>0)
+		
+		while(bulletCount > 0 || shotCount > 0)
 		{
-			System.out.println("Action: ");
+			Scanner kb = new Scanner(System.in);
+			System.out.println("\nAction: ");
 			String action = kb.next();
-			if (action.equals("R"))
+			
+			if(action.equals("R"))
 			{
 				reload();
 			}
-			else if (action.equals("S"))
+			if(action.equals("S"))
 			{
-				shotCount++;
-				System.out.println(shoot());
+				System.out.print(shoot());
 			}
-			System.out.println(printClip());
+			printClip();
 		}
-		if(bulletCount == 0)
-		{
-			System.out.println("Out of Bullets!!!");
-		}
+		System.out.println("Out of bullets!!!");
 	}
 	public static void resetClip()
 	{
-		for(int i = 0; i<clip.length; i++)
-		{
+		for(int i = 0; i < clip.length; i++)
 			clip[i] = "[]";
-		}
 	}
 	public static String shoot()
 	{
 		if(shotCount > 0)
 		{
 			clip[shotCount - 1] = "[]";
-			shotCount-=1;
-			return "Boom!!!";
+			shotCount = shotCount - 1;
+			return "Bam!!!";
 		}
 		else
-		{
 			return "Reload!!!";
-		}
 	}
 	public static void reload()
 	{
-		if(bulletCount >= ClipSize)
+		if(bulletCount >= clipSize)
 		{
-			bulletCount-=ClipSize;
-			shotCount = ClipSize;
+			bulletCount = bulletCount - clipSize;
+			shotCount = clipSize;
 		}
 		else
 		{
@@ -66,18 +62,14 @@ public class GameGun
 		}
 		resetClip();
 		for(int i = 0; i < shotCount; i++)
-		{
 			clip[i] = " * ";
-		}
 	}
-	public static String printClip()
+	public static void printClip()
 	{
-		String output = " ";
-		output+= "Bullets:	" + bulletCount + "\nClip:		";
-		for (int i = 0; i < ClipSize; i++)
-		{
-			output+= clip[i];
-		}
-		return output;
+		String output = "";
+		output += "\nBullets:\t" + bulletCount + "\nClip:\t";
+		for(int i = 0; i < clipSize; i++)
+			output += clip[i];
+		System.out.print(output);
 	}
 }
