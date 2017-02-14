@@ -17,6 +17,8 @@ public abstract class Toy
 		
 	}
 	
+	public abstract String getType();
+	
 	public void setname(String n)
 	{
 		this.name = n;
@@ -24,7 +26,7 @@ public abstract class Toy
 	
 	public String getname()
 	{
-		return name;
+		return this.name;
 	}
 	
 	public void setcount(int c)
@@ -34,14 +36,12 @@ public abstract class Toy
 	
 	public int getcount()
 	{
-		return count;
+		return this.count;
 	}
-	
-	public abstract String getType();
 	
 	public String toString()
 	{
-			return name + ": " + count;
+			return this.name + ": " + this.count;
 	}
 	
 }

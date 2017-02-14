@@ -1,11 +1,12 @@
+import java.util.*;
 public class ToyRunner
 {
 	public static void main(String[]args)
 	{
-		AFigure t1 = new AFigure("SuperMan");
-		Car t2 = new Car("BMW");
+		AFigure hero = new AFigure("batman");
+		Car fast = new Car("ferrari");
 		
-		System.out.println(t1.toString());
-		System.out.println(t2.toString());
+		System.out.println(hero);
+		System.out.println(fast);
 	}
 }
