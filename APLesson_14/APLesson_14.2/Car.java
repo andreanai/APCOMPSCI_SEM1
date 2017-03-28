@@ -6,6 +6,7 @@ public class Car implements Location
 	
 	public Car()
 	{
+		location = new double[2];
 		id = (int)(Math.random()*1000000) + 1;
 	}
 	
