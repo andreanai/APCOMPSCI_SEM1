@@ -99,4 +99,45 @@ public class IntArrayWorker
     }
   }
  
+/**
+ * returns the count of the number of times the passed integer is found in array
+ */
+    public int getCount(int countThis)
+    {
+        int count = 0;
+        for (int row = 0; row < matrix.length; row++)
+        {
+          for (int col = 0; col < matrix[0].length; col++)
+          {
+            if( matrix[row][col] == countThis )
+                count = count + 1;
+          }
+        }
+        return count;
+    }
+/**
+ * returns the largest element found in array
+ */
+    public int getLargest()
+    {
+      int maxElement = -1;
+      for (int[] matrix1 : matrix) {
+          for (int col = 0; col < matrix[0].length; col++) {
+              if (matrix1[col] > maxElement) {
+                  maxElement = matrix1[col];
+              }
+          }
+      }
+      return maxElement;
+    }
+/**
+ * returns the total of the indicated column in an array
+ */
+    public int getColTotal(int colIndex)
+    {
+      int colTotal = 0;
+      for (int[] rowCount : matrix)
+        colTotal += rowCount[colIndex];
+      return colTotal;
+    }
 }
